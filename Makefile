@@ -4,8 +4,8 @@ frogger: Frogger.asm
 hogger: Hogger.asm
 	stella ./Hogger.bin
 
-#Frogger.asm: Frogger.bin
-	./distella -paf -cfrogger.cfg ./Frogger.bin > ./Frogger.asm
+# Frogger.asm: Frogger.bin
+	# ./distella -paf -cfrogger.cfg ./Frogger.bin > ./Frogger.asm
 
 Hogger.bin: Hogger.asm
 	./dasm Hogger.asm -f3 -oHogger.bin
