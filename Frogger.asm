@@ -318,21 +318,21 @@ LF1EF: STA    $CC,X
        .byte $02 ; |      X | $F1FF
        .byte $03 ; |      XX| $F200
        .byte $02 ; |      X | $F201
-       .byte $01 ; |       X| $F202
+       .byte $FF; strip
        .byte $03 ; |      XX| $F203
        .byte $01 ; |       X| $F204
        .byte $00 ; |        | $F205
        .byte $08 ; |    X   | $F206
        .byte $18 ; |   XX   | $F207
        .byte $08 ; |    X   | $F208
-       .byte $38 ; |  XXX   | $F209
+       .byte $FF; strip
        .byte $00 ; |        | $F20A
        .byte $18 ; |   XX   | $F20B
        .byte $00 ; |        | $F20C
 LF20D: .byte $A5 ; |X X  X X| $F20D
        .byte $DB ; |XX XX XX| $F20E
        .byte $6A ; | XX X X | $F20F
-       .byte $B0 ; |X XX    | $F210
+       .byte $FF; strip
        .byte $03 ; |      XX| $F211
        .byte $4C ; | X  XX  | $F212
        ORA    $A4F3,X
@@ -1685,7 +1685,7 @@ LFD14: .byte $B3 ; |X XX  XX| $FD14
        .byte $B3 ; |X XX  XX| $FD1D
        .byte $B3 ; |X XX  XX| $FD1E
        .byte $00 ; |        | $FD1F
-       .byte $0E ; |    XXX | $FD20
+       .byte $FF; strip
        .byte $0C ; |    XX  | $FD21
        .byte $08 ; |    X   | $FD22
        .byte $02 ; |      X | $FD23
@@ -1723,7 +1723,7 @@ LFD3C: .byte $D4 ; |XX X X  | $FD3C
        .byte $EA ; |XXX X X | $FD43
        .byte $DF ; |XX XXXXX| $FD44
        .byte $D4 ; |XX X X  | $FD45
-       .byte $DF ; |XX XXXXX| $FD46
+       .byte $FF; strip
 LFD47: .byte $9F ; |X  XXXXX| $FD47
        .byte $00 ; |        | $FD48
        .byte $9F ; |X  XXXXX| $FD49
@@ -1754,7 +1754,7 @@ LFD58: .byte $04 ; |     X  | $FD58
        .byte $6D ; | XX XX X| $FD62
        .byte $08 ; |    X   | $FD63
        .byte $67 ; | XX  XXX| $FD64
-       .byte $06 ; |     XX | $FD65
+       .byte $FF; strip
        .byte $70 ; | XXX    | $FD66
        .byte $00 ; |        | $FD67
        .byte $0C ; |    XX  | $FD68
@@ -1762,7 +1762,7 @@ LFD58: .byte $04 ; |     X  | $FD58
        .byte $0C ; |    XX  | $FD6A
        .byte $A4 ; |X X  X  | $FD6B
        .byte $0C ; |    XX  | $FD6C
-       .byte $A8 ; |X X X   | $FD6D
+       .byte $FF; strip
        .byte $00 ; |        | $FD6E
        .byte $2E ; |  X XXX | $FD6F
        .byte $42 ; | X    X | $FD70
@@ -1774,7 +1774,7 @@ LFD58: .byte $04 ; |     X  | $FD58
        .byte $62 ; | XX   X | $FD76
        .byte $28 ; |  X X   | $FD77
        .byte $43 ; | X    XX| $FD78
-       .byte $22 ; |  X   X | $FD79
+       .byte $FF; strip
        .byte $45 ; | X   X X| $FD7A
        .byte $2E ; |  X XXX | $FD7B
        .byte $42 ; | X    X | $FD7C
@@ -1782,7 +1782,7 @@ LFD58: .byte $04 ; |     X  | $FD58
        .byte $43 ; | X    XX| $FD7E
        .byte $22 ; |  X   X | $FD7F
        .byte $45 ; | X   X X| $FD80
-       .byte $2E ; |  X XXX | $FD81
+       .byte $FF; strip
        .byte $42 ; | X    X | $FD82
        .byte $28 ; |  X X   | $FD83
        .byte $43 ; | X    XX| $FD84
@@ -1790,7 +1790,7 @@ LFD58: .byte $04 ; |     X  | $FD58
        .byte $45 ; | X   X X| $FD86
        .byte $00 ; |        | $FD87
        .byte $1E ; |   XXXX | $FD88
-       .byte $70 ; | XXX    | $FD89
+       .byte $FF; strip
        .byte $26 ; |  X  XX | $FD8A
        .byte $45 ; | X   X X| $FD8B
        .byte $18 ; |   XX   | $FD8C
@@ -1802,7 +1802,7 @@ LFD8F: .byte $97 ; |X  X XXX| $FD8F
        .byte $8F ; |X   XXXX| $FD92
        .byte $1A ; |   XX X | $FD93
        .byte $17 ; |   X XXX| $FD94
-       .byte $14 ; |   X X  | $FD95
+       .byte $FF; strip
        .byte $13 ; |   X  XX| $FD96
        .byte $11 ; |   X   X| $FD97
        .byte $0F ; |    XXXX| $FD98
@@ -1814,7 +1814,7 @@ LFD8F: .byte $97 ; |X  X XXX| $FD8F
        .byte $62 ; | XX   X | $FD9E
        .byte $42 ; | X    X | $FD9F
        .byte $40 ; | X      | $FDA0
-       .byte $41 ; | X     X| $FDA1
+       .byte $FF; strip
        .byte $73 ; | XXX  XX| $FDA2
        .byte $73 ; | XXX  XX| $FDA3
        .byte $61 ; | XX    X| $FDA4
@@ -1823,7 +1823,7 @@ LFD8F: .byte $97 ; |X  X XXX| $FD8F
        .byte $A3 ; |X X   XX| $FDA7
        .byte $A0 ; |X X     | $FDA8
        .byte $A3 ; |X X   XX| $FDA9
-       .byte $73 ; | XXX  XX| $FDAA
+       .byte $FF; strip
        .byte $73 ; | XXX  XX| $FDAB
        .byte $60 ; | XX     | $FDAC
        .byte $63 ; | XX   XX| $FDAD
@@ -1833,7 +1833,7 @@ LFD8F: .byte $97 ; |X  X XXX| $FD8F
        .byte $93 ; |X  X  XX| $FDB1
        .byte $83 ; |X     XX| $FDB2
        .byte $73 ; | XXX  XX| $FDB3
-       .byte $60 ; | XX     | $FDB4
+       .byte $FF; strip
        .byte $53 ; | X X  XX| $FDB5
        .byte $42 ; | X    X | $FDB6
        .byte $00 ; |        | $FDB7
@@ -1842,15 +1842,15 @@ LFD8F: .byte $97 ; |X  X XXX| $FD8F
        .byte $62 ; | XX   X | $FDBA
        .byte $70 ; | XXX    | $FDBB
        .byte $82 ; |X     X | $FDBC
-       .byte $A0 ; |X X     | $FDBD
-       .byte $62 ; | XX   X | $FDBE
+       .byte $FF; strip
+       .byte $60 ; | XX     | $FDB4
        .byte $A0 ; |X X     | $FDBF
        .byte $42 ; | X    X | $FDC0
        .byte $50 ; | X X    | $FDC1
        .byte $62 ; | XX   X | $FDC2
        .byte $50 ; | X X    | $FDC3
        .byte $42 ; | X    X | $FDC4
-       .byte $A0 ; |X X     | $FDC5
+       .byte $FF; strip
        .byte $42 ; | X    X | $FDC6
        .byte $A0 ; |X X     | $FDC7
        .byte $42 ; | X    X | $FDC8
@@ -1860,7 +1860,7 @@ LFD8F: .byte $97 ; |X  X XXX| $FD8F
        .byte $82 ; |X     X | $FDCC
        .byte $A0 ; |X X     | $FDCD
        .byte $62 ; | XX   X | $FDCE
-       .byte $A0 ; |X X     | $FDCF
+       .byte $FF; strip
        .byte $83 ; |X     XX| $FDD0
        .byte $70 ; | XXX    | $FDD1
        .byte $63 ; | XX   XX| $FDD2
@@ -1868,7 +1868,7 @@ LFD8F: .byte $97 ; |X  X XXX| $FD8F
        .byte $42 ; | X    X | $FDD4
        .byte $00 ; |        | $FDD5
        .byte $C3 ; |XX    XX| $FDD6
-       .byte $C3 ; |XX    XX| $FDD7
+       .byte $FF; strip
        .byte $3C ; |  XXXX  | $FDD8
        .byte $66 ; | XX  XX | $FDD9
        .byte $DB ; |XX XX XX| $FDDA
@@ -1880,7 +1880,7 @@ LFD8F: .byte $97 ; |X  X XXX| $FD8F
        .byte $42 ; | X    X | $FDE0
 LFDE1: .byte $01 ; |       X| $FDE1
        .byte $0B ; |    X XX| $FDE2
-       .byte $0E ; |    XXX | $FDE3
+       .byte $FF; strip
        .byte $16 ; |   X XX | $FDE4
        .byte $0F ; |    XXXX| $FDE5
        .byte $08 ; |    X   | $FDE6
@@ -1891,7 +1891,7 @@ LFDE1: .byte $01 ; |       X| $FDE1
        .byte $02 ; |      X | $FDEB
 LFDEC: .byte $51 ; | X X   X| $FDEC
        .byte $5B ; | X XX XX| $FDED
-       .byte $5E ; | X XXXX | $FDEE
+       .byte $FF; strip
        .byte $66 ; | XX  XX | $FDEF
        .byte $5F ; | X XXXXX| $FDF0
        .byte $32 ; |  XX  X | $FDF1
@@ -1913,7 +1913,7 @@ LFDFD: .byte $00 ; |        | $FDFD
        .byte $00 ; |        | $FE01
        .byte $A3 ; |X X   XX| $FE02
        .byte $02 ; |      X | $FE03
-       .byte $58 ; | X XX   | $FE04
+       .byte $FF; strip
        .byte $00 ; |        | $FE05
        .byte $A3 ; |X X   XX| $FE06
        .byte $04 ; |     X  | $FE07
@@ -1936,7 +1936,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $ED ; |XXX XX X| $FE18
        .byte $FF ; |XXXXXXXX| $FE19
        .byte $00 ; |        | $FE1A
-       .byte $00 ; |        | $FE1B
+       .byte $FF; strip
        .byte $9A ; |X  XX X | $FE1C
        .byte $02 ; |      X | $FE1D
        .byte $07 ; |     XXX| $FE1E
@@ -1949,7 +1949,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $06 ; |     XX | $FE25
        .byte $09 ; |    X  X| $FE26
        .byte $06 ; |     XX | $FE27
-       .byte $02 ; |      X | $FE28
+       .byte $FF; strip
        .byte $07 ; |     XXX| $FE29
        .byte $0E ; |    XXX | $FE2A
        .byte $0D ; |    XX X| $FE2B
@@ -1958,7 +1958,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $09 ; |    X  X| $FE2E
        .byte $06 ; |     XX | $FE2F
        .byte $06 ; |     XX | $FE30
-       .byte $0A ; |    X X | $FE31
+       .byte $FF; strip
        .byte $06 ; |     XX | $FE32
        .byte $02 ; |      X | $FE33
        .byte $07 ; |     XXX| $FE34
@@ -1967,7 +1967,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $01 ; |       X| $FE37
        .byte $0E ; |    XXX | $FE38
        .byte $0A ; |    X X | $FE39
-       .byte $06 ; |     XX | $FE3A
+       .byte $FF; strip
        .byte $06 ; |     XX | $FE3B
        .byte $0B ; |    X XX| $FE3C
        .byte $06 ; |     XX | $FE3D
@@ -1979,9 +1979,9 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $0E ; |    XXX | $FE43
        .byte $0B ; |    X XX| $FE44
        .byte $06 ; |     XX | $FE45
-       .byte $06 ; |     XX | $FE46
+       .byte $06 ; |     XX | $FE3A
        .byte $0A ; |    X X | $FE47
-       .byte $06 ; |     XX | $FE48
+       .byte $FF; strip
        .byte $02 ; |      X | $FE49
        .byte $07 ; |     XXX| $FE4A
        .byte $0E ; |    XXX | $FE4B
@@ -1993,7 +1993,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $06 ; |     XX | $FE51
        .byte $09 ; |    X  X| $FE52
        .byte $06 ; |     XX | $FE53
-       .byte $03 ; |      XX| $FE54
+       .byte $FF; strip
        .byte $07 ; |     XXX| $FE55
        .byte $07 ; |     XXX| $FE56
        .byte $03 ; |      XX| $FE57
@@ -2003,7 +2003,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $01 ; |       X| $FE5B
        .byte $03 ; |      XX| $FE5C
        .byte $01 ; |       X| $FE5D
-       .byte $01 ; |       X| $FE5E
+       .byte $FF; strip
        .byte $03 ; |      XX| $FE5F
        .byte $03 ; |      XX| $FE60
        .byte $01 ; |       X| $FE61
@@ -2014,7 +2014,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $01 ; |       X| $FE66
        .byte $03 ; |      XX| $FE67
        .byte $03 ; |      XX| $FE68
-       .byte $01 ; |       X| $FE69
+       .byte $FF; strip
        .byte $03 ; |      XX| $FE6A
        .byte $01 ; |       X| $FE6B
        .byte $03 ; |      XX| $FE6C
@@ -2023,7 +2023,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $01 ; |       X| $FE6F
        .byte $00 ; |        | $FE70
        .byte $03 ; |      XX| $FE71
-       .byte $01 ; |       X| $FE72
+       .byte $FF; strip
        .byte $00 ; |        | $FE73
        .byte $01 ; |       X| $FE74
        .byte $03 ; |      XX| $FE75
@@ -2035,14 +2035,14 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $01 ; |       X| $FE7B
        .byte $01 ; |       X| $FE7C
        .byte $03 ; |      XX| $FE7D
-       .byte $00 ; |        | $FE7E
+       .byte $FF; strip
        .byte $01 ; |       X| $FE7F
        .byte $03 ; |      XX| $FE80
        .byte $00 ; |        | $FE81
        .byte $03 ; |      XX| $FE82
        .byte $03 ; |      XX| $FE83
        .byte $07 ; |     XXX| $FE84
-       .byte $03 ; |      XX| $FE85
+       .byte $FF; strip
        .byte $01 ; |       X| $FE86
        .byte $01 ; |       X| $FE87
        .byte $00 ; |        | $FE88
@@ -2052,7 +2052,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $07 ; |     XXX| $FE8C
        .byte $01 ; |       X| $FE8D
        .byte $03 ; |      XX| $FE8E
-       .byte $01 ; |       X| $FE8F
+       .byte $FF; strip
        .byte $03 ; |      XX| $FE90
        .byte $07 ; |     XXX| $FE91
        .byte $00 ; |        | $FE92
@@ -2061,7 +2061,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $03 ; |      XX| $FE95
        .byte $01 ; |       X| $FE96
        .byte $01 ; |       X| $FE97
-       .byte $00 ; |        | $FE98
+       .byte $FF; strip
        .byte $01 ; |       X| $FE99
        .byte $03 ; |      XX| $FE9A
        .byte $01 ; |       X| $FE9B
@@ -2070,7 +2070,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $D4 ; |XX X X  | $FE9E
        .byte $CD ; |XX  XX X| $FE9F
        .byte $BF ; |X XXXXXX| $FEA0
-       .byte $DB ; |XX XX XX| $FEA1
+       .byte $FF; strip
        .byte $50 ; | X X    | $FEA2
        .byte $B1 ; |X XX   X| $FEA3
        .byte $B8 ; |X XXX   | $FEA4
@@ -2080,7 +2080,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $C6 ; |XX   XX | $FEA8
        .byte $D4 ; |XX X X  | $FEA9
        .byte $CD ; |XX  XX X| $FEAA
-       .byte $BF ; |X XXXXXX| $FEAB
+       .byte $FF; strip
        .byte $DB ; |XX XX XX| $FEAC
        .byte $50 ; | X X    | $FEAD
        .byte $B1 ; |X XX   X| $FEAE
@@ -2088,7 +2088,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $B8 ; |X XXX   | $FEB0
        .byte $B1 ; |X XX   X| $FEB1
        .byte $A3 ; |X X   XX| $FEB2
-       .byte $C6 ; |XX   XX | $FEB3
+       .byte $FF; strip
        .byte $D4 ; |XX X X  | $FEB4
        .byte $CD ; |XX  XX X| $FEB5
        .byte $BF ; |X XXXXXX| $FEB6
@@ -2096,7 +2096,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $50 ; | X X    | $FEB8
        .byte $B1 ; |X XX   X| $FEB9
        .byte $B8 ; |X XXX   | $FEBA
-       .byte $B8 ; |X XXX   | $FEBB
+       .byte $FF; strip
        .byte $B1 ; |X XX   X| $FEBC
        .byte $AA ; |X X X X | $FEBD
        .byte $C6 ; |XX   XX | $FEBE
@@ -2105,7 +2105,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $BF ; |X XXXXXX| $FEC1
        .byte $DB ; |XX XX XX| $FEC2
        .byte $95 ; |X  X X X| $FEC3
-       .byte $B1 ; |X XX   X| $FEC4
+       .byte $FF; strip
        .byte $B8 ; |X XXX   | $FEC5
        .byte $B8 ; |X XXX   | $FEC6
        .byte $B1 ; |X XX   X| $FEC7
@@ -2117,7 +2117,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $DB ; |XX XX XX| $FECD
        .byte $5C ; | X XXX  | $FECE
        .byte $B1 ; |X XX   X| $FECF
-       .byte $B8 ; |X XXX   | $FED0
+       .byte $FF; strip
        .byte $B8 ; |X XXX   | $FED1
        .byte $B1 ; |X XX   X| $FED2
        .byte $B8 ; |X XXX   | $FED3
@@ -2126,7 +2126,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $00 ; |        | $FED6
        .byte $03 ; |      XX| $FED7
        .byte $05 ; |     X X| $FED8
-       .byte $05 ; |     X X| $FED9
+       .byte $FF; strip
        .byte $03 ; |      XX| $FEDA
        .byte $02 ; |      X | $FEDB
        .byte $07 ; |     XXX| $FEDC
@@ -2140,7 +2140,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $05 ; |     X X| $FEE4
        .byte $03 ; |      XX| $FEE5
        .byte $04 ; |     X  | $FEE6
-       .byte $07 ; |     XXX| $FEE7
+       .byte $FF; strip
        .byte $01 ; |       X| $FEE8
        .byte $07 ; |     XXX| $FEE9
        .byte $00 ; |        | $FEEA
@@ -2152,7 +2152,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $03 ; |      XX| $FEF0
        .byte $06 ; |     XX | $FEF1
        .byte $07 ; |     XXX| $FEF2
-       .byte $01 ; |       X| $FEF3
+       .byte $FF; strip
        .byte $07 ; |     XXX| $FEF4
        .byte $02 ; |      X | $FEF5
        .byte $01 ; |       X| $FEF6
@@ -2164,7 +2164,7 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $06 ; |     XX | $FEFC
        .byte $07 ; |     XXX| $FEFD
        .byte $01 ; |       X| $FEFE
-       .byte $07 ; |     XXX| $FEFF
+       .byte $FF; strip
        .byte $00 ; |        | $FF00
 LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $22 ; |  X   X | $FF02
@@ -2178,7 +2178,7 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $0C ; |    XX  | $FF0A
        .byte $1C ; |   XXX  | $FF0B
        .byte $0C ; |    XX  | $FF0C
-       .byte $0C ; |    XX  | $FF0D
+       .byte $FF; strip
        .byte $0C ; |    XX  | $FF0E
        .byte $7F ; | XXXXXXX| $FF0F
        .byte $00 ; |        | $FF10
@@ -2186,7 +2186,7 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $03 ; |      XX| $FF12
        .byte $03 ; |      XX| $FF13
        .byte $3E ; |  XXXXX | $FF14
-       .byte $60 ; | XX     | $FF15
+       .byte $FF; strip
        .byte $60 ; | XX     | $FF16
        .byte $7F ; | XXXXXXX| $FF17
        .byte $00 ; |        | $FF18
@@ -2196,7 +2196,7 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $3E ; |  XXXXX | $FF1C
        .byte $03 ; |      XX| $FF1D
        .byte $03 ; |      XX| $FF1E
-       .byte $7E ; | XXXXXX | $FF1F
+       .byte $FF; strip
        .byte $00 ; |        | $FF20
        .byte $02 ; |      X | $FF21
        .byte $06 ; |     XX | $FF22
@@ -2209,7 +2209,7 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $7E ; | XXXXXX | $FF29
        .byte $60 ; | XX     | $FF2A
        .byte $60 ; | XX     | $FF2B
-       .byte $3E ; |  XXXXX | $FF2C
+       .byte $FF; strip
        .byte $03 ; |      XX| $FF2D
        .byte $03 ; |      XX| $FF2E
        .byte $7E ; | XXXXXX | $FF2F
@@ -2220,7 +2220,7 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $7E ; | XXXXXX | $FF34
        .byte $63 ; | XX   XX| $FF35
        .byte $63 ; | XX   XX| $FF36
-       .byte $3E ; |  XXXXX | $FF37
+       .byte $FF; strip
        .byte $00 ; |        | $FF38
        .byte $7F ; | XXXXXXX| $FF39
        .byte $61 ; | XX    X| $FF3A
@@ -2233,7 +2233,7 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $3E ; |  XXXXX | $FF41
        .byte $63 ; | XX   XX| $FF42
        .byte $63 ; | XX   XX| $FF43
-       .byte $3E ; |  XXXXX | $FF44
+       .byte $FF; strip
        .byte $63 ; | XX   XX| $FF45
        .byte $63 ; | XX   XX| $FF46
        .byte $3E ; |  XXXXX | $FF47
@@ -2244,7 +2244,7 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $3F ; |  XXXXXX| $FF4C
        .byte $03 ; |      XX| $FF4D
        .byte $03 ; |      XX| $FF4E
-       .byte $3E ; |  XXXXX | $FF4F
+       .byte $FF; strip
        .byte $00 ; |        | $FF50
        .byte $00 ; |        | $FF51
        .byte $00 ; |        | $FF52
@@ -2257,7 +2257,7 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $00 ; |        | $FF59
        .byte $00 ; |        | $FF5A
        .byte $00 ; |        | $FF5B
-       .byte $00 ; |        | $FF5C
+       .byte $FF; strip
        .byte $00 ; |        | $FF5D
        .byte $08 ; |    X   | $FF5E
        .byte $1D ; |   XXX X| $FF5F
@@ -2269,7 +2269,7 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $B8 ; |X XXX   | $FF65
        .byte $7D ; | XXXXX X| $FF66
        .byte $E6 ; |XXX  XX | $FF67
-       .byte $40 ; | X      | $FF68
+       .byte $FF; strip
        .byte $00 ; |        | $FF69
        .byte $F8 ; |XXXXX   | $FF6A
        .byte $FF ; |XXXXXXXX| $FF6B
@@ -2278,7 +2278,7 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $C0 ; |XX      | $FF6E
        .byte $E0 ; |XXX     | $FF6F
        .byte $F0 ; |XXXX    | $FF70
-       .byte $B8 ; |X XXX   | $FF71
+       .byte $FF; strip
        .byte $5C ; | X XXX  | $FF72
        .byte $06 ; |     XX | $FF73
        .byte $82 ; |X     X | $FF74
@@ -2289,7 +2289,7 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $BA ; |X XXX X | $FF79
        .byte $92 ; |X  X  X | $FF7A
        .byte $BA ; |X XXX X | $FF7B
-       .byte $7C ; | XXXXX  | $FF7C
+       .byte $FF; strip
        .byte $38 ; |  XXX   | $FF7D
        .byte $FE ; |XXXXXXX | $FF7E
        .byte $92 ; |X  X  X | $FF7F
@@ -2303,7 +2303,7 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $EE ; |XXX XXX | $FF87
        .byte $77 ; | XXX XXX| $FF88
        .byte $1C ; |   XXX  | $FF89
-       .byte $3E ; |  XXXXX | $FF8A
+       .byte $FF; strip
        .byte $7E ; | XXXXXX | $FF8B
        .byte $3E ; |  XXXXX | $FF8C
        .byte $1C ; |   XXX  | $FF8D
@@ -2315,7 +2315,7 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $24 ; |  X  X  | $FF93
        .byte $42 ; | X    X | $FF94
        .byte $81 ; |X      X| $FF95
-       .byte $88 ; |X   X   | $FF96
+       .byte $FF; strip
        .byte $58 ; | X XX   | $FF97
        .byte $7C ; | XXXXX  | $FF98
        .byte $25 ; |  X  X X| $FF99
@@ -2328,7 +2328,7 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $A4 ; |X X  X  | $FFA0
        .byte $60 ; | XX     | $FFA1
        .byte $C0 ; |XX      | $FFA2
-       .byte $40 ; | X      | $FFA3
+       .byte $FF; strip
        .byte $2B ; |  X X XX| $FFA4
        .byte $2E ; |  X XXX | $FFA5
        .byte $FC ; |XXXXXX  | $FFA6
@@ -2341,7 +2341,7 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $FC ; |XXXXXX  | $FFAD
        .byte $FF ; |XXXXXXXX| $FFAE
        .byte $7E ; | XXXXXX | $FFAF
-       .byte $38 ; |  XXX   | $FFB0
+       .byte $FF; strip
        .byte $14 ; |   X X  | $FFB1
        .byte $3C ; |  XXXX  | $FFB2
        .byte $7E ; | XXXXXX | $FFB3
