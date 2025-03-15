@@ -1,11 +1,11 @@
-frogger: Frogger.asm
+frogger: Frogger.bin
 	stella ./Frogger.bin
 
-hogger: Hogger.asm
+hogger: Hogger.bin
 	stella ./Hogger.bin
 
-# Frogger.asm: Frogger.bin
-	# ./distella -paf -cfrogger.cfg ./Frogger.bin > ./Frogger.asm
+reset:
+	./distella -paf -cfrogger.cfg ./Frogger.bin.bak > ./Frogger.asm
 
 Hogger.bin: Hogger.asm
 	./dasm Hogger.asm -f3 -oHogger.bin
