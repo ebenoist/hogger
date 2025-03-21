@@ -8,24 +8,31 @@
 .byte $44
 .byte $44 ; H - LEN 7
 
-.byte $38 ; O - LEN 8
+.byte $38 ; O - LEN 7
 .byte $44
 .byte $44
 .byte $44
 .byte $44
 .byte $44
-.byte $44
-.byte $38 ; O - LEN 8
+.byte $38 ; O - LEN 7
 
 
-.byte $41 ; M - LEN 8
+.byte $41 ; M - LEN 7
 .byte $63
 .byte $55
 .byte $49
 .byte $41
 .byte $41
+.byte $41 ; M - LEN 7
+
+.byte $41 ; M - LEN 7
 .byte $41
-.byte $41 ; M - LEN 8
+.byte $41
+.byte $49
+.byte $55
+.byte $63
+.byte $41 ; M - LEN 7
+
 
 
 .byte $7C ; E - LEN 7
