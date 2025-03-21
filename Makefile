@@ -5,7 +5,7 @@ hogger: Hogger.bin
 	stella ./Hogger.bin
 
 reset:
-	./distella -paf -cfrogger.cfg ./Frogger.bin.bak > ./Frogger.asm
+	./distella -paf -cfrogger.cfg ./Frogger.bin > ./Frogger.asm
 
 Hogger.bin: Hogger.asm
 	./dasm Hogger.asm -f3 -oHogger.bin
