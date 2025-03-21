@@ -1,5 +1,5 @@
 ; Disassembly of ./Frogger.bin.bak
-; Disassembled Fri Mar 21 16:39:43 2025
+; Disassembled Fri Mar 21 14:52:52 2025
 ; Using DiStella v3.02-SNAPSHOT
 ;
 ; Command Line: ./distella -paf -cfrogger.cfg ./Frogger.bin.bak
@@ -2123,14 +2123,14 @@ LFE15: .byte $FF ; |XXXXXXXX| $FE15
        .byte $B8 ; |X XXX   | $FED3
        .byte $01 ; |       X| $FED4
        .byte $06 ; |     XX | $FED5
-       .byte $00 ; |        | $FED6
-       .byte $03 ; |      XX| $FED7
-       .byte $05 ; |     X X| $FED8
-       .byte $05 ; |     X X| $FED9
-       .byte $03 ; |      XX| $FEDA
-       .byte $02 ; |      X | $FEDB
-       .byte $07 ; |     XXX| $FEDC
-       .byte $01 ; |       X| $FEDD
+       .byte $38 ; O - LEN 8
+       .byte $44
+       .byte $44
+       .byte $44
+       .byte $44
+       .byte $44
+       .byte $44
+       .byte $38 ; O - LEN 8
        .byte $07 ; |     XXX| $FEDE
        .byte $03 ; |      XX| $FEDF
        .byte $06 ; |     XX | $FEE0
@@ -2343,20 +2343,20 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $7E ; | XXXXXX | $FFAF
        .byte $38 ; |  XXX   | $FFB0
        .byte $14 ; |   X X  | $FFB1
-       .byte $08 ; HEART - LEN 7
-       .byte $1C
-       .byte $3E
-       .byte $7F
-       .byte $7F
-       .byte $36
-       .byte $00 ; HEART - LEN 7
-       .byte $38 ; smile - LEN7
+       .byte $44 ; H - LEN 7
        .byte $44
-       .byte $82
-       .byte $10
-       .byte $00
-       .byte $6C
-       .byte $00 ; smile - LEN 7
+       .byte $44
+       .byte $7C
+       .byte $44
+       .byte $44
+       .byte $44 ; H - LEN 7
+       .byte $38 ; O - LEN 7
+       .byte $44
+       .byte $44
+       .byte $44
+       .byte $44
+       .byte $44
+       .byte $38 ; O - LEN 7
        .byte $44 ; H - LEN 7
        .byte $44
        .byte $44
@@ -2378,20 +2378,20 @@ LFF01: .byte $1C ; |   XXX  | $FF01
        .byte $44
        .byte $44
        .byte $38 ; O - LEN 7
-       .byte $41 ; M - LEN 7 REVERSED
+       .byte $41 ; M - LEN 7
        .byte $41
        .byte $41
        .byte $49
        .byte $55
        .byte $63
        .byte $41 ; M - LEN 7
-       .byte $5F ; | X XXXXX| $FFDC
-       .byte $FF ; |XXXXXXXX| $FFDD
-       .byte $FF ; |XXXXXXXX| $FFDE
-       .byte $FF ; |XXXXXXXX| $FFDF
-       .byte $FF ; |XXXXXXXX| $FFE0
-       .byte $FF ; |XXXXXXXX| $FFE1
-       .byte $5F ; | X XXXXX| $FFE2
+       .byte $44 ; H - LEN 7
+       .byte $44
+       .byte $44
+       .byte $7C
+       .byte $44
+       .byte $44
+       .byte $44 ; H - LEN 7
        .byte $00 ; |        | $FFE3
        .byte $E0 ; |XXX     | $FFE4
        .byte $A0 ; |X X     | $FFE5
